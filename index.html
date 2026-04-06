@@ -4,78 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="src/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Currículo Digital</title>
 </head>
 <body>
-    <div class="grid-container">
+    <div class="content-wrapper">
         <nav>
             <menu class="menu-top">
                 <li>Maria Helena Machado Melo</li>
                 <li><a href="">Início</a></li>
-                <li><a href="">Entre em contato</a></li>
+                <li><a href="" class="right-align">Entre em contato</a></li>
             </menu>
             <menu class="menu-bottom">
-                <li>Início</li>
-                <li>Sobre Mim</li>
-                <li>Experiência</li>
-                <li>Projetos</li>
-                <li>Habilidades</li>
-                <li>Extras</li>
-                <li>Dicionário HTML</li>
+                <li><a href="">Início</a></li>
+                <li><a href="#about-me">Sobre Mim</a></li>
+                <li><a href="#experience">Experiência</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#extras">Extras</a></li>
+                <li><a href="/html/dict.html">Dicionário HTML</a></li>
             </menu>
         </nav>
 
-        <div class="content-wrapper">
+        <div class="content">
             <aside>
                 <section>
-                    <img src="src/foto.png" alt="">
+                    <img src="src/foto.png" alt="" class="main-pic">
                     <h2>Maria Helena</h2>
                     <p>Florianópolis/SC</p>
                     <p>Sistemas de Informação (UFSC)</p>
                     <p>3a fase</p>
                 </section>
                 <hr>
-                <section>
+                <section class="social-media">
                     <h2>Redes Socias</h2>
-                    <p><a href="">@notmasmas</a></p>
-                    <p><a href="">Maria Helena Machado Melo</a></p>
+                    <img src="/src/github-white-icon.png" alt="">
+                    <p class="github"><a href="https://github.com/notmasmas" target="_blank">@notmasmas</a></p>
+                    <img src="/src/linkedin-app-white-icon.png" alt="">
+                    <p><a href="https://www.linkedin.com/in/maria-helena-machado-melo-19703837b/" target="_blank">Maria Helena Machado Melo</a></p>
                 </section>
                 <hr>
                 <section>
                     <h2>Contato</h2>
+                    <img src="/src/email-envelope-white-icon.png" alt="">
                     <p>mariahelenammelo23@gmail.com</p>
                 </section>
             </aside>
-
             <main>
-                <section>
-                    <h2>> Sobre Mim</h2>
+                <section id="about-me">
+                    <h2>Sobre Mim</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem consectetur eius est excepturi dolorem non labore magnam a vel? Sequi dicta vero amet pariatur unde quia error saepe necessitatibus mollitia!</p>
                 </section>
-                <section>
-                    <h2>> Experiência</h2>
-                    <h3>Iniciação Científica, Projeto CÉOS</h3>
-                    <ul>
-                        <li>Criação e manutenção de um banco de dados não-relacional MongoDB</li>
-                        <li>Manutenção do banco de dados relacional PostgreSQL</li>
-                        <li>Implementação de um ingestor de dados no fluxo do sistema principal, automatizando a entrada de dados no banco</li>
-                    </ul>
-                    <h3>Bolsista, PET Informática</h3>
-                    <ul>
-                        <li>Manutenção do site do PET Informática</li>
-                        <li>Transferência do site do PET Biologia para os servidores da UFSC</li>
-                        <li>Apoio à organização da Semana Acadêmica de Sistemas e Computação (SECCOM)</li>
-                    </ul>
+                <section id="experience">
+                    <h2>Experiência</h2>
+                    <a href="https://ceos.ufsc.br/" target="_blank" class="experience">
+                        <h3>Iniciação Científica, Projeto CÉOS</h3>
+                        <ul>
+                            <li>Criação e manutenção de um banco de dados não-relacional MongoDB</li>
+                            <li>Manutenção do banco de dados relacional PostgreSQL</li>
+                            <li>Implementação de um ingestor de dados no fluxo do sistema principal, automatizando a entrada de dados no banco</li>
+                        </ul>
+                    </a>
+                    <a href="https://petinformatica.ufsc.br/" target="_blank" class="experience">
+                        <h3>Bolsista, PET Informática</h3>
+                        <ul>
+                            <li>Manutenção do site do PET Informática</li>
+                            <li>Transferência do site do PET Biologia para os servidores da UFSC</li>
+                            <li>Apoio à organização da Semana Acadêmica de Sistemas e Computação (SECCOM)</li>
+                        </ul>
+                    </a>
                 </section>
-                <section>
-                    <h2>> Projetos</h2>
+                <section id="projects">
+                    <h2>Projetos</h2>
+                    <div class="projects-grid">
+                        <a href="https://github.com/Gustavo-de-Pinho/Agencia-de-viagens" target="_blank">
+                            <h3>Agência de Viagens</h3>
+                            <p>Projeto desenvolvido para a disciplina de Desenvolvimento Orientado Objetos. É um sistema de gerenciamento de viagens, incluindo passagens, países, passeios turísticos, etc.</p>
+                        </a>
+                        <a href="https://github.com/notmasmas/trabalho-devweb" target="_blank">
+                            <h3>Sistema de Avaliação de Jogos</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, itaque. Id incidunt sequi, harum a omnis ducimus reiciendis quisquam ad esse quis consectetur nam delectus fugit provident neque laborum dolores.</p>
+                        </a>
+                        <a href="https://github.com/notmasmas/trabalho-devweb" target="_blank">
+                            <h3>Sistema de Avaliação de Jogos</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, itaque. Id incidunt sequi, harum a omnis ducimus reiciendis quisquam ad esse quis consectetur nam delectus fugit provident neque laborum dolores.</p>
+                        </a>
+                    </div>
                 </section>
-                <section>
-                    <h2>> Habilidades</h2>
+                <section id="skills">
+                    <h2>Habilidades</h2>
                 </section>
-                <section>
-                    <h2>> Extras</h2>
+                <section id="extras">
+                    <h2>Extras</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non in similique, quos accusantium hic illum illo, eligendi excepturi dignissimos nisi repellat commodi alias ex quaerat doloremque facilis aliquam reiciendis consequuntur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi officiis amet nemo aut blanditiis velit natus distinctio repudiandae quas, dolores id, est, illo aliquid aliquam architecto quisquam at maxime nesciunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo suscipit hic ducimus perferendis dolorem, repudiandae blanditiis cum, rem necessitatibus in ratione architecto. Consectetur, vel libero tempore saepe nobis similique perspiciatis?</p>
                 </section>
             </main>
