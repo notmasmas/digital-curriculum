@@ -14,8 +14,8 @@
     <div class="content-wrapper">
         <nav>
             <menu class="menu-top">
-                <li>Maria Helena Machado Melo</li>
-                <li class="menu-top-start"><a href="">Início</a></li>
+                <li class="glass">Maria Helena Machado Melo</li>
+                <li class="menu-top-start glass"><a href="">Início</a></li>
                 <li class="right-align">
                     <a href="mailto:mariahelenammelo23@gmail.com" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
@@ -26,20 +26,19 @@
                 </li>
             </menu>
             <menu class="menu-bottom">
-                <li><a href="">Início</a></li>
-                <li><a href="#about-me">Sobre Mim</a></li>
-                <li><a href="#experience">Experiência</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="./html/dict.html">Dicionário HTML</a></li>
+                <li class="glass"><a href="">Início</a></li>
+                <li class="glass"><a href="#about-me">Sobre Mim</a></li>
+                <li class="glass"><a href="#experience">Experiência</a></li>
+                <li class="glass"><a href="#projects">Projetos</a></li>
+                <li class="glass"><a href="#skills">Habilidades</a></li>
             </menu>
         </nav>
 
         <div class="content">
-            <aside>
+            <aside class="glass">
                 <section>
                     <img src="src/me.png" alt="" class="main-pic">
-                    <h2>Maria Helena</h2>
+                    <h2>Maria Helena Melo</h2>
                     <p>Florianópolis/SC</p>
                     <p>Sistemas de Informação (UFSC)</p>
                     <p>3a fase</p>
@@ -76,32 +75,46 @@
                         </a>
                     </p>
                 </section>
+                <hr>
+                <section>
+                    <h2>Currículo</h2>
+                    <p>
+                        <a href="./src/Curriculo_Maria_Helena_Melo.pdf" download="Curriculo_Maria_Helena_Melo.pdf">
+                            Baixar currículo
+                        </a>
+                    </p>
+                </section>
             </aside>
             <main>
-                <section id="about-me">
+                <section id="about-me" class="glass">
                     <h2>Sobre Mim</h2>
-                    <p>Sou estudante de graduação de Sistemas de Informação na Universidade Federal de Santa Catarina. Atualmente possuo experiência em laboratórios da universidade na área acadêmica, mas estou procurando agora ingressar no mundo profissional! Trabalho principalmente com desenvolvimento back-end (Node.js, Express.js, PostgreSQL, MongoDB).</p>
+                    <p>Sou estudante de graduação de Sistemas de Informação na Universidade Federal de Santa Catarina. Atualmente possuo experiência em laboratórios da universidade na área acadêmica, mas estou procurando ingressar no mundo profissional! Trabalho principalmente com desenvolvimento back-end (Node.js, Express, PostgreSQL e MongoDB). Me interesso muito pela criação de APIs e autenticação de dados!</p>
                 </section>
-                <section id="experience">
+                <section id="experience" class="glass">
                     <h2>Experiência</h2>
                     <a href="https://ceos.ufsc.br/" target="_blank" class="experience">
                         <h3>Iniciação Científica, Projeto CÉOS</h3>
                         <ul>
-                            <li>Criação e manutenção de um banco de dados não-relacional MongoDB</li>
-                            <li>Manutenção do banco de dados relacional PostgreSQL</li>
-                            <li>Implementação de um ingestor de dados no fluxo do sistema principal com Python e a biblioteca PyMongo, automatizando a entrada de dados no banco</li>
+                            <li>Desenvolvimento de um sistema de automação de inserção de dados no banco de dados
+                            MongoDB, para a auditabilidade de dados processados no fluxo posteriormente </li>
+                            <li>Gerenciamento e modelagem os dados no banco de dados MongoDB do projeto, para a
+                            inserção de dados pelo fluxo</li>
+                            <li>Padronização de dados e manutenção de tabelas no banco de dados relacional principal do
+                            projeto, com objetivo de facilitar a visualização de dados e testes para outras equipes.</li>
                         </ul>
                     </a>
                     <a href="https://petinformatica.ufsc.br/" target="_blank" class="experience">
                         <h3>Bolsista, PET Informática</h3>
                         <ul>
-                            <li>Manutenção do site do PET Informática</li>
-                            <li>Transferência do site do PET Biologia para os servidores da UFSC</li>
-                            <li>Apoio à organização da Semana Acadêmica de Sistemas e Computação (SECCOM)</li>
+                            <li>Auxílio na hospedagem de sites de outras organizações da universidade nos servidores
+                            internos da UFSC para manter a disponibilidade constante dos dados requeridos</li>
+                            <li>Participação na organização da Semana Acadêmica de Computação e Sistemas (SECCOM),
+                            produzindo material de divulgação e definindo os horários das palestras e outros eventos
+                            presentes</li>
                         </ul>
                     </a>
                 </section>
-                <section id="projects">
+                <section id="projects" class="glass">
                     <h2>Projetos</h2>
                     <div class="projects-grid">
                         <a href="https://github.com/Gustavo-de-Pinho/Agencia-de-viagens" target="_blank">
@@ -110,27 +123,30 @@
                         </a>
                         <a href="https://github.com/notmasmas/trabalho-devweb" target="_blank">
                             <h3>Site comunitário do Centro Acadêmico de Design IFSC</h3>
-                            <p>Site desenvolvido para o Centro Acadêmico do curso de Design no IFSC, vizando centralizar informações para estudantes do curso, com biblioteca de PDFs, espaço de divulgação de trabalhos e fórum.</p>
+                            <p>Desenvolvimento full-stack de um site para o curso de design do Instituto Federal de Santa Catarina, visando centralizar as informações importantes para alunos de graduação. Desenvolvido com Node.js, Express, MongoDB e React. Inclui autenticação de requests com JWT e hashing de dados críticos.</p>
                         </a>
                     </div>
                 </section>
-                <section id="skills">
+                <section id="skills" class="glass">
                     <h2>Habilidades</h2>
                     <ul>
-                        <li>Desenvolvimento back-end com Node.js</li>
-                        <li>Criação de APIs com Node.js e Express.js</li>
-                        <li>Gerência e estruturação de bancos de dados não-relacionais com MongoDB</li>
-                        <li>Gerência de bancos de dados relacionais com PostgreSQL</li>
-                        <li>Desenvolvimento front-end com HTML, CSS, JavaScript e frameworks</li>
-                        <li>Programação com paradigma orientado a objetos com Python e C++</li>
+                        <li>Desenvolvimento e automação em Python</li>
+                        <li>Análise de dados com o software RStudio e a linguagem R</li>
+                        <li>Desenvolvimento de APIs RESTful utilizando Node.js e Express/li>
+                        <li>Desenvolvimento front-end com HTML, CSS, Bootstrap e React</li>
+                        <li>Autenticação em protocolo HTTPs com JWT</li>
+                        <li>Modelagem de dados e gestão de bancos PostgreSQL, SQLite e MongoDB</li>
+                        <li>Noções de Dev/Ops e conteinerização com Docker</li>
+                        <li>Conhecimento e utilização de sistemas operacionais baseados em Linux</li>
+                        <li>Ferramenta Git para versionamento de código</li>
+                        <li>Inglês fluente e alemão A2-B1</li>
                     </ul>
                 </section>
             </main>
         </div>
         
-        <footer>
+        <footer class="glass">
             <p>Maria Helena M. Melo, 2026</p>
-            <a href="https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/" target="_blank">Free SVG Backgrounds and Patterns by SVGBackgrounds.com</a>
         </footer>
     </div>
 </body>

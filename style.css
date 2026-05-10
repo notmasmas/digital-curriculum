@@ -1,5 +1,5 @@
 :root {
-    --highlight-colour: #002159;
+    --highlight-colour: #9400d3;
     --light-gray: #ebebeb;
 }
 
@@ -10,11 +10,31 @@
 }
 
 body {
-    background-color: var(--highlight-colour);
-    font-family: 'Courier New', Courier, monospace;
+    background-color: #9400d3;
+    font-family: Inter, Helvetica, sans-serif;
 
-    background-color: var(--highlight-colour);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='580' height='69.6' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%2300338B' stroke-width='3.1' stroke-opacity='0.46'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url('./src/background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+.glass {
+    background-color: rgba(255, 255, 255, 0.432);
+    color: black;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 15px rgba(135, 135, 135, .1), 0 0 18px 3px rgba(0, 0, 0, .3);
+
+/*     border-top: 1px solid rgba(153, 153, 153, 0.5);
+    border-left: 1px solid rgba(153, 153, 153, 0.5);
+    border-bottom: 1px solid rgba(156, 156, 156, 0.5);
+    border-right: 1px solid rgba(0, 0, 0, 0.5); */
 }
 
 .content-wrapper {
@@ -23,7 +43,8 @@ body {
 
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
 /* MENU */
@@ -32,51 +53,51 @@ nav menu li {
     display: inline;
 }
 
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
 nav a:hover {
-    font-weight: bold;
+    filter: blur(1px);
+}
+
+nav li {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;;
 }
 
 .menu-top {
     display: flex;
 
     padding: 10px;
-
-    background-color: black;
-    color: white;
-}
-
-.menu-top li {
-    margin-right: 5px;
-}
-
-.menu-top-start::before {
-    content: "|";
-    padding: 5px;
-    color: white;
 }
 
 .right-align {
+    background-color: black;
+    color: white;
     margin-left: auto;
 }
 
-.menu-top a {
+.right-align a {
     color: white;
-    text-decoration: none;
 }
 
 .menu-bottom {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     padding: 10px;
-    background-color: white;
-
-    box-shadow: 10px 10px black, 15px 15px rgba(0, 0, 0, 0.300);
 }
 
 .menu-bottom li {
-    padding: 0px 10px;
+    text-align: center;
+    width: 130px;
 }
 
 .menu-bottom a {
-    color: var(--highlight-colour);
+    color: black;
     text-decoration: none;
 }
 
@@ -85,12 +106,7 @@ nav a:hover {
 .content {
     flex-grow: 1;
     display: grid;
-    grid-template-columns: 250px 1fr;
-
-
-    background-color: black;
-    color: white;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.5), 15px 15px rgba(0, 0, 0, 0.300);
+    grid-template-columns: 260px 1fr;
 
     margin: 30px auto;
     max-width: 1000px;
@@ -99,8 +115,10 @@ nav a:hover {
 }
 
 aside {
-    font-size: 12.5px;
-    margin: 10px 20px 10px 10px;
+    font-size: 13px;
+    margin: 20px 20px 10px 10px;
+    padding: 20px 5px;
+    border-radius: 20px;
 }
 
 .main-pic {
@@ -109,6 +127,8 @@ aside {
 }
 
 aside h2 {
+    font-size: 1.5em;
+    font-weight: normal;
     text-align: center;
     padding: 10px;
 }
@@ -118,18 +138,14 @@ aside p {
     text-align: center;
 }
 
-aside a {
-    color: white;
-    text-decoration: none;
-}
 
 aside a:hover {
-    color: var(--highlight-colour);
+    color: rgba(255, 255, 255, 0.432);
 }
 
 aside hr {
     height: 1px;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.377);
     margin: 15px;
 }
 
@@ -146,14 +162,29 @@ main {
     padding: 10px;
     border-radius: 35px;
 
-    background-color: white;
     color: black;
-    font-family: Inter, Helvetica, sans-serif;
-    font-size: 14.5px;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+main > section {
+    padding: 5px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+main a {
+    background-color: rgba(255, 255, 255, 0.082);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.295);
+}
+
+main a:hover {
+    border: 10px var(--highlight-colour);
+    box-shadow: 0 0 5px 1px gray;
+    filter: blur(1px);
 }
 
 main h2 {
-    font-family: 'Courier New', Courier, monospace;
     font-weight: normal;
     font-size: 20px;
 
@@ -161,19 +192,17 @@ main h2 {
 }
 
 main h2::before {
-    content: "|";
-    color: var(--highlight-colour);
+    content: "| ";
+    color:#25004e;
     font-weight: bold;
 }
 
 main > section > h3 {
     margin: 10px;
-    font-weight: bold;
     font-size: 14.5px;
 }
 
 main > section > p {
-    background-color: var(--light-gray);
 
     border-radius: 15px;
     padding: 10px;
@@ -192,7 +221,6 @@ main ul li {
 
 .experience {
     display: block;
-    background-color: var(--light-gray);
 
     padding: 5px;
     margin: 10px;
@@ -200,11 +228,6 @@ main ul li {
 
     color: black;
     text-decoration: none;
-}
-
-.experience:hover {
-    border: 10px var(--highlight-colour);
-    box-shadow: 0 0 5px 1px gray;
 }
 
 .experience h3 {
@@ -216,26 +239,20 @@ main ul li {
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: stretch;
 }
 
 .projects-grid > a {
     display: block;
-    background-color: var(--light-gray);
-    height: 200px;
     padding: 15px;
     border-radius: 15px;
     margin: 10px;
 
-    text-decoration: none;
     color: black;
     text-align: justify;
 
-    overflow: hidden;
-}
-
-.projects-grid > a:hover {
-    border: 10px var(--highlight-colour);
-    box-shadow: 0 0 5px 1px gray;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .projects-grid > a > p {
@@ -261,58 +278,13 @@ footer {
     display: flex;
     background-color: black;
     color: white;
-    padding: 5px;
-}
-
-footer a {
-    margin-left: auto;
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: var(--highlight-colour);
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    justify-content: right;
 }
 
 @media (max-width: 750px) {
     .content {grid-template-columns: 1fr;}
     .projects-grid { grid-template-columns: 1fr;}
-}
-
-/* TABLE STUFF */
-
-.table-content {
-    border-collapse: collapse;
-    margin: 25px 0;
-    min-width: 500px;
-    max-width: 800px;
-    border-radius: 15px;
-    overflow: hidden;
-
-    font-family: Inter, Arial, sans-serif;
-
-    background-color: white;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.5), 15px 15px rgba(0, 0, 0, 0.300);
-}
-
-.table-content thead tr {
-    background-color:rgb(0, 23, 61);
-    color: white;
-    border-radius: 20px;
-}
-
-.table-content th, td {
-    padding: 10px;
-}
-
-.table-content tbody tr:nth-of-type(even) {
-    background-color: var(--light-gray);
-}
-
-.table-div {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    max-width: 1000px;
 }
